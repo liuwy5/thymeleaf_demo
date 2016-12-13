@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{home.title}">login</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/js/login/login.js}"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<form method="post" id="loginForm" action="/login/auth">
+    <div class="login-alert" th:text="${errorInfo}"></div>
+    login: <input name="name" id="name" value="fsdfd111"/>
+    password: <input name="password" id="password" />
+    <button type="submit" name="submit" id="loginButton" value="submit">submit</button>
+
+    <div id="area" th:text="${info}">fdsf</div>
+</form>
+</body>
+</html>
